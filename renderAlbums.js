@@ -1,10 +1,16 @@
 
 function renderAlbums(albums) {
+    
+    
     return `
         <div class="text-center mt-5">
-            <code>${JSON.stringify(albums)}</code>
+            <div class="name">${albums.title}</div>
+            <div class="for">${transaction.length}</div>
+            <div class="date">${transaction.song}</div>
+            <div class="amount">${transaction.amount}</div>
         </div>
     `
+    
 }
 
 function albums() {
@@ -77,7 +83,8 @@ function albums() {
                 }
             ]
         }
-    ]
+    ]//album data
+    
 
     content.innerHTML = renderAlbums(albumsAbstraction);
 
