@@ -1,10 +1,30 @@
 
 function renderMovies(movies) {
-    return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(movies)}</code>
-        </div>
-    `
+    let myMovieString = ''
+    for (let i = 0;i < movies.length; i++) {
+        myMovieString = myMovieString + `
+                                            <div class="container">
+                                            <div class="row">
+                                            <div class="col">
+                                            <img src ="${movies[i].poster}">
+                                            </div>
+                                            <div class="col">
+                                                <div class="card" style="width: 18rem;">
+                                                <div class="card-body">
+                                                <h5 class="card-title">${movies[i].title}</h5>
+                                                <h4>${movies[i].year}</h4>
+                                                <h2>IMBD</h2>
+                                                <h3>${movies[i].imdbRating}</h3>
+                                                <h2>Rotten Tomatoes</h2>
+                                                <h3>${movies[i].rottenTomatoesRating}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            </div>
+                                            </div> `
+    }
+    
+    return myMovieString
 }
 
 function movies() {
